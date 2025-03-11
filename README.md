@@ -11,5 +11,5 @@ Please see [Python SDK](https://fair-documentation.readthedocs.io/en/latest/SDKM
 Build
 ----------------
 ```
-./almond_setup.sh
+./setup.sh <INSTALL_PATH>
 ```
