@@ -2,6 +2,8 @@
 
 INSTALL_PATH=$1
 
+pip3 install cython setuptools
+
 python3 setup.py build_ext --inplace
 
 if [ -n "$INSTALL_PATH" ]; then
