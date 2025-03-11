@@ -2,9 +2,9 @@
 
 INSTALL_PATH=$1
 
-pip3 install cython setuptools
+python3.12 -m pip install cython setuptools
 
-python3 setup.py build_ext --inplace
+python3.12 setup.py build_ext --inplace
 
 if [ -n "$INSTALL_PATH" ]; then
     BUILD_ARTIFACT=$(find . -name "*.so" | head -n 1)
