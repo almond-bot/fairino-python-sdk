@@ -240,10 +240,11 @@ class RPC():
         self.robot_state_pkg = RobotStatePkg#机器人状态数据
 
         self.stop_event = threading.Event()  # 停止事件
-        self.connect_to_robot()
-        thread= threading.Thread(target=self.robot_state_routine_thread)#创建线程循环接收机器人状态数据
-        thread.daemon = True
-        thread.start()
+        # ALMOND – this is broken
+        # self.connect_to_robot()
+        # thread= threading.Thread(target=self.robot_state_routine_thread)#创建线程循环接收机器人状态数据
+        # thread.daemon = True
+        # thread.start()
         time.sleep(1)
         print(self.robot)
 
@@ -10584,8 +10585,9 @@ class RPC():
         # 清理 XML-RPC 代理
         if self.robot is not None:
             self.robot = None  # 将代理设置为 None，释放资源
-            self.sock_cli_state.close()
-            self.sock_cli_state = None
+            # ALMOND – this is broken
+            # self.sock_cli_state.close()
+            # self.sock_cli_state = None
             self.robot_state_pkg = None
             self.closeRPC_state = True
             # self.robot_realstate_exit = False
